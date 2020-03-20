@@ -6,22 +6,25 @@ Your function must utilize recursion. It cannot contain any loops.
 
 
 def count_th(word):
-    counted = 0
+    counted = []
+    th = "th"
+    print(counted)
 
     def num_of_times(word, th):
         into_array = list(word)
-        if len(into_array) > 1:
+        if len(into_array) >= 2:
             to_check = into_array[0] + into_array[1]
             if th in to_check:
-                counted += 1
-
+                counted.append(1)
             sub_array = into_array[1:]
             return num_of_times(sub_array, th)
-
         else:
-            pass
+            return 0
 
-    return counted
+    num_of_times(word, th)
+    print(counted)
+    collated_count = sum(counted)
+    return collated_count
 
 
-count_th("Fire")
+count_th("Thougth")
