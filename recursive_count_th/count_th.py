@@ -8,7 +8,6 @@ Your function must utilize recursion. It cannot contain any loops.
 def count_th(word):
     counted = []
     th = "th"
-    print(counted)
 
     def num_of_times(word, th):
         into_array = list(word)
@@ -22,7 +21,6 @@ def count_th(word):
             return 0
 
     num_of_times(word, th)
-    print(counted)
     collated_count = sum(counted)
     return collated_count
 
